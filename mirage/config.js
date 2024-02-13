@@ -27,7 +27,7 @@ export default function() {
 
   this.del('/student/:id', (schema, request) => {
     let id = request.params.id;
-  
+    
     return schema.students.find(id).destroy();
   });
 

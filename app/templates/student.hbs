@@ -3,6 +3,7 @@
 <div>
   <img src="https://blog.zohowebstatic.com/sites/zblogs/images/mail/blog_without_text-2020-07.gif" alt="zoho-gif">
 </div>
+
 <div class="row py-5 mx-auto d-flex justify-content-center ">
 
   {{#each this.model.data as |student|}}
@@ -32,4 +33,4 @@
 
 </div>
 
-<Sidebar @selectedStudent={{this.selectedStudent}} @isSidebar = {{this.isSidebarOpen}} />
+<Sidebar @selectedStudent={{this.selectedStudent}} @isSidebar = {{this.isSidebarOpen}} @deleteStudent={{action "deleteStudent"}} @closure = {{action "closeSidebar"}}/>

@@ -1,9 +1,12 @@
 {{yield}}
+
+{{log this.isUpdate}}
+
 {{#if this.isSidebar}}
   <div class="sidebar">
     <div class="sidebar-content m-5">
 
-      <i class="fa fa-close d-flex justify-content-end my-3" style="font-size:28px;color:red" onclick={{action "toggleSidebar"}}></i>
+      <i class="fa fa-close d-flex justify-content-end my-3" style="font-size:28px;color:red" onclick={{this.closure}}></i>
 
       <img src={{this.selectedStudent.attributes.image}} alt="student-image">
       <h5 class="pt-5 text-center">Name: {{this.selectedStudent.attributes.name}}</h5>
@@ -11,8 +14,8 @@
       <h5 class="text-center">Year: {{this.selectedStudent.attributes.year}}</h5>
 
       <div class="d-flex flex-row justify-content-around mx-auto my-5">
-        <button class="btn btn-danger " onclick={{action "deleteStudent" }} >Delete</button>
-        <button class="btn btn-primary " onclick={{action "toggleSidebar"}} >Close</button>
+        <button class="btn btn-danger" onclick={{this.deleteStudent}} >Delete</button>
+        <button class="btn btn-primary " onclick={{this.closure}} >Close</button>
       </div>
 
     </div>
