@@ -12,20 +12,20 @@ export default function() {
     return schema.students.find(id);
   });
 
-  this.post('/addStudent', (schema, request) => {
+  this.post('/student', (schema, request) => {
     let attrs = JSON.parse(request.requestBody).students;
   
     return schema.students.create(attrs);
   });
 
-  this.put('/updatestudent/:id', function(schema, request) {
+  this.put('/student/:id', function(schema, request) {
     let id = request.params.id;
     let attrs = JSON.parse(request.requestBody).students;
   
     return schema.students.find(id).update(attrs);
   });
 
-  this.del('/deletestudent/:id', (schema, request) => {
+  this.del('/student/:id', (schema, request) => {
     let id = request.params.id;
   
     return schema.students.find(id).destroy();

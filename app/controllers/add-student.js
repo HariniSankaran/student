@@ -15,7 +15,7 @@ export default Controller.extend({
 
             window.alert("Do you wish to add the student detail");
 
-            let response = await fetch('/api/addStudent', {
+            let response = await fetch('/api/student', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

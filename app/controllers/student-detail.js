@@ -16,7 +16,7 @@ export default Controller.extend({
 
             window.alert("Do you wish to update the student detail");
 
-            let response = await fetch(`/api/updatestudent/${this.model.data.id}`, {
+            let response = await fetch(`/api/student/${this.model.data.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
