@@ -6,7 +6,7 @@
 
 <div class="row py-5 mx-auto d-flex justify-content-center ">
 
-  {{#each this.model.data as |student|}}
+  {{#each this.model as |student|}}
 
     <div class="col-3 card p-3 m-3 text-center card-bg">
       <img src={{student.attributes.image}} class="card-img-top card-img" alt={{student.attributes.name}}>
@@ -34,3 +34,13 @@
 </div>
 
 <Sidebar @selectedStudent={{this.selectedStudent}} @isSidebar = {{this.isSidebarOpen}} @deleteStudent={{action "deleteStudent"}} @closure = {{action "closeSidebar"}}/>
+
+<button class="docs-p-2 primary-button" {{action (perform this.fetchCountries)}} type="button">
+  Get All Contacts
+</button>
+
+{{!-- {{#if this.getContacts.lastSuccessful}}
+  <div class="docs-mt-4">
+    Total no. of contacts: <b>{{this.getContacts.lastSuccessful.value.length}}</b>
+  </div>
+{{/if}} --}}

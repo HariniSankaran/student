@@ -1,9 +1,16 @@
 import Controller from '@ember/controller';
+import { task } from 'ember-concurrency';
+
 
 export default Controller.extend({
     isSidebarOpen : false,
 
     selectedStudent : null,
+
+    fetchCountries: task(function* () {
+        console.log(this.store.getJSON('/student'))
+        return yield this.store.getJSON('/student');
+    }),
 
     actions: {
 
