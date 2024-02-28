@@ -9,29 +9,20 @@ export default Controller.extend({
     actions: {
         async postStudent(){
 
-            // let {image, year,name,domain} = this;
-            // // let studentDetails = {
-            // //     image, year,name,domain
-            // // };
             // let requestBody = {
-                    
             //         image: document.getElementById('image').value,
             //         year: document.getElementById('year').value,
             //         name: document.getElementById('name').value,
             //         domain: document.getElementById('domain').value
-                    
-            //     };
+            // };
 
-            // window.alert("Do you wish to add the student detail");
+            // let studentModel = this.store.createRecord('student', JSON.stringify(requestBody));
+            // this.set('contactModel',studentModel);
+
+            // console.log(studentModel.saveRecord());
+
+            // return studentModel.saveRecord();
             
-
-            // let StudentModel = this.store.createRecord('student',JSON.stringify(requestBody));
-            // this.set('studentModel',StudentModel);
-
-            // let response = StudentModel.saveRecord();
-            // console.log(response);
-            // this.transitionToRoute("student");
-            // return response;
 
             let requestBody = {
                 students: {

@@ -17,7 +17,6 @@ export default Controller.extend({
         openSidebar(student) {
             this.set('isSidebarOpen', true);
             this.set('selectedStudent', student);
-            console.log("adasd",  this.selectedStudent);
         },
 
         closeSidebar() {
